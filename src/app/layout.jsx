@@ -25,7 +25,7 @@ export default function RootLayout({ children }) {
       >
 
         <Header />
-        <main className="max-w-7xl mx-auto py-5">
+        <main className="max-w-7xl mx-auto">
           {children}
         </main>
 
