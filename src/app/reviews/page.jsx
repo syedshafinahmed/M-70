@@ -1,3 +1,4 @@
+// client side rendering
 "use client";
 import ReviewCard from '@/components/cards/ReviewCard';
 import React, { useEffect, useState } from 'react';

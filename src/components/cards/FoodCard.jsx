@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React from "react";
+import CartButton from "../buttons/CartButton";
 
 const FoodCard = ({ food }) => {
   return (
@@ -15,7 +16,7 @@ const FoodCard = ({ food }) => {
         />
 
         {/* Image overlay */}
-        <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/40 to-transparent" />
+        <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/5 to-transparent" />
 
         {/* Category (hover only) */}
         <span className="absolute top-4 fugaz left-4 px-3 py-1 rounded-full text-xs font-extralight
@@ -40,12 +41,7 @@ const FoodCard = ({ food }) => {
 
         {/* Actions */}
         <div className="flex gap-3">
-          <button
-            className="flex-1 rounded-xl bg-orange-500 py-2 text-xs font-light text-black
-                       hover:bg-orange-400 active:scale-95 transition-all duration-200"
-          >
-            Add to Cart
-          </button>
+          <CartButton />
 
           <Link href={`/foods/${food.id}`} className="flex-1 rounded-xl border border-orange-400/30 bg-white/5 py-2 text-center
                          text-xs font-light text-orange-400
