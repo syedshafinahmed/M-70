@@ -1,6 +1,7 @@
 // server side rendering
 import FoodCard from '@/components/cards/FoodCard';
-import { FaShoppingCart } from "react-icons/fa";
+import Cart from '@/components/icons/Cart';
+import { BsCart3 } from "react-icons/bs";
 const getFoods = async () => {
   const res = await fetch("https://taxi-kitchen-api.vercel.app/api/v1/foods/random");
   const data = await res.json();
@@ -14,7 +15,7 @@ const page = async () => {
     <div>
       <div className='flex items-center justify-between'>
         <h2 className='text-4xl font-bold py-6'>Total <span className='fugaz text-orange-500'>{foods.length}</span> Foods Found </h2>
-        <FaShoppingCart className='text-orange-500 pr-3 text-5xl' />
+        <Cart />
       </div>
       <div className="grid grid-cols-5 gap-6">
         {

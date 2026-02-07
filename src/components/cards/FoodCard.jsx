@@ -36,20 +36,20 @@ const FoodCard = ({ food }) => {
         {/* Price */}
 
         <p className="text-sm baumans py-2 font-extralight text-stone-400">
-            ৳ {food.price}
-          </p>
+          ৳ {food.price}
+        </p>
 
         {/* Actions */}
         <div className="flex gap-3">
-          <CartButton />
+          <CartButton food={food} />
 
           <Link href={`/foods/${food.id}`} className="flex-1 rounded-xl border border-orange-400/30 bg-white/5 py-2 text-center
                          text-xs font-light text-orange-400
                          hover:bg-white/10 active:scale-95 transition-all duration-200">
-              View Details
-            </Link>
-          
-            
+            View Details
+          </Link>
+
+
           {/* </Link> */}
         </div>
       </div>
