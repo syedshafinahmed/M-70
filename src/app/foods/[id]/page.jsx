@@ -6,6 +6,16 @@ const getFood = async (id) => {
   return data.details || null;
 }
 
+export async function generateMetadata({ params }) {
+  const { id } = await params;
+  const res = await fetch(`https://taxi-kitchen-api.vercel.app/api/v1/foods/${id}`);
+  const { details = {} } = await res.json();
+  return {
+    title: details.title,
+    description: `Discover the delicious ${details.title} from Yantun Khaijan. Explore its unique flavors, ingredients, and the story behind this popular fast food item. Satisfy your cravings with our mouthwatering ${details.title} today!`,
+  }
+}
+
 const page = async ({ params }) => {
   const { id } = await params;
   const food = await getFood(id);
@@ -63,7 +73,7 @@ const page = async ({ params }) => {
               {food.category}
             </span>
 
-            <span 
+            <span
               className="rounded-full px-4 py-1.5 baumans text-xs tracking-wide
                bg-white/5 border border-white/10 hover:ring-1 hover:ring-white-400/30 transition text-gray-300
                opacity-0 translate-y-2
