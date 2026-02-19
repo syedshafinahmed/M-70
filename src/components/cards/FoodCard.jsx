@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import CartButton from "../buttons/CartButton";
+import Image from "next/image";
 
 const FoodCard = ({ food }) => {
   return (
@@ -9,7 +10,9 @@ const FoodCard = ({ food }) => {
 
       {/* Image */}
       <div className="relative h-40 overflow-hidden">
-        <img
+        <Image
+          width={320}
+          height={160}  
           src={food.foodImg}
           alt={food.title}
           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"

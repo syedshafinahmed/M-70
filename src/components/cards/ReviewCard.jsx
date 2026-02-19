@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { AiFillLike } from "react-icons/ai";
 
 const ReviewCard = ({ review }) => {
@@ -7,7 +8,9 @@ const ReviewCard = ({ review }) => {
 
       {/* Header: Avatar, Name */}
       <div className="flex items-center gap-4">
-        <img
+        <Image
+          width={48}
+          height={48} 
           src={review.photo}
           alt={review.user}
           className="h-12 rounded-2xl object-cover border border-orange-500 shadow-md"
