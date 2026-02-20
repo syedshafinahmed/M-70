@@ -4,14 +4,15 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "www.themealdb.com",
-        pathname: "/images/media/meals/**",
+        // hostname: "www.themealdb.com",
+        hostname: "*",
+        // pathname: "/images/media/meals/**",
       },
-      {
-        protocol: "https",
-        hostname: "randomuser.me",
-        pathname: "/api/portraits/**",
-      },
+      // {
+      //   protocol: "https",
+      //   hostname: "randomuser.me",
+      //   pathname: "/api/portraits/**",
+      // },
     ],
   },
   /* config options here */

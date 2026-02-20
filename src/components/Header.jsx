@@ -17,6 +17,7 @@ const Header = () => {
         <div className='space-x-5'>
           <Link className='btn' href="/foods">Foods</Link>
           <Link className='btn' href="/reviews">Reviews</Link>
+          <Link className='btn' href="/posts">Posts</Link>
         </div>
       </div>
     </div>
